@@ -31,8 +31,9 @@ namespace netcore_3._1_api_performance_tests
 
                     ThreadPool.GetAvailableThreads(out avaiableWorkerThreads, out avaiablePortThreads);
 
-                    Console.WriteLine($"{DateTime.Now} - threads in use {threadsCount} from avaiable workers threads: {avaiableWorkerThreads}, avaiable ports: {avaiablePortThreads}");
-                    Thread.Sleep(1000);
+                    //Console.WriteLine($"{DateTime.Now} - threads in use {threadsCount} from avaiable workers threads: {avaiableWorkerThreads}, avaiable ports: {avaiablePortThreads}");
+                    Console.WriteLine($"{DateTime.Now} - Avaiable workers threads: {avaiableWorkerThreads}, Avaiable Ports Threads: {avaiablePortThreads}");
+                    Thread.Sleep(500);
                 }
             }, TaskCreationOptions.LongRunning);
 
