@@ -24,7 +24,7 @@ namespace netcore_3._1_api_performance_tests.Controllers
         [HttpGet("{id}", Name = "GetEmployee")]
         public ActionResult<Employee> Get(int id)
         {
-            var employee = new Employee { Name = "Tiago", BirthDate = new System.DateTime(1995, 9, 15), OnBoardDate = new System.DateTime(2021, 11, 25) };
+            var employee = new Employee { Name = "Tiago", BirthDate = new System.DateTime(2000, 1, 1), OnBoardDate = new System.DateTime(2021, 11, 25) };
             Thread.Sleep(1000);
             return Ok(employee);
         }
@@ -32,7 +32,7 @@ namespace netcore_3._1_api_performance_tests.Controllers
         [HttpGet("async/{id}", Name = "GetEmployeeAsync")]
         public async Task<ActionResult<Employee>> GetAsync(int id)
         {
-            var employee = new Employee { Name = "Tiago", BirthDate = new System.DateTime(1995, 9, 15), OnBoardDate = new System.DateTime(2021, 11, 25) };
+            var employee = new Employee { Name = "Tiago", BirthDate = new System.DateTime(2000, 1, 1), OnBoardDate = new System.DateTime(2021, 11, 25) };
             await Task.Delay(1000);
             return Ok(employee);
         }
@@ -41,7 +41,7 @@ namespace netcore_3._1_api_performance_tests.Controllers
         public ActionResult<IEnumerable<Employee>> Get()
         {
             IEnumerable<Employee> employees = _employeeService.Employees;
-            Task.Delay(1000).Wait();
+            Thread.Sleep(1000);
             return Ok(employees);
         }
 

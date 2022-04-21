@@ -1,4 +1,4 @@
-﻿# API async Tests - api-sync-x-async
+﻿# API Async Tests - api-sync-x-async
 .NET Core based Web API, wich one represent an Application whose goal is test benefits from async API in comparison on sync API
 
 ## Prerequisites
